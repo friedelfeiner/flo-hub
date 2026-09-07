@@ -83,7 +83,7 @@ nicht als solche ausgeliefert. Das Build-Skript ist Python ohne Fremdpakete.
       Satz, dass es noch nicht automatisch läuft. Nachweis: sichtbar in der
       gebauten Seite für alle vier Entwurfs-Ressorts.
 
-## Block B — Hosting
+## Block B — Hosting ✅
 
 **Abhängigkeit:** Block A
 **Risiko:** hoch
@@ -97,9 +97,9 @@ nicht indexiert ist. Der Block trägt trotzdem `Risiko: hoch`, weil hier zum
 ersten Mal etwas nach außen geht und das im öffentlichen Repo unwiderruflich
 ist.
 
-- [ ] **B1** `[FLO]` Bei All-Inkl zeigt ein CNAME für `hub.floachleitner.com`
+- [x] **B1** `[FLO]` Bei All-Inkl zeigt ein CNAME für `hub.floachleitner.com`
       auf GitHub Pages.
-- [ ] **B2** Die gebaute Seite ist über `hub.floachleitner.com` mit gültigem
+- [x] **B2** Die gebaute Seite ist über `hub.floachleitner.com` mit gültigem
       HTTPS-Zertifikat erreichbar.
 - [x] **B3** `site/robots.txt` sperrt alle Bots, und jede erzeugte Seite trägt
       `<meta name="robots" content="noindex, nofollow">`. Nachweis: beides im
