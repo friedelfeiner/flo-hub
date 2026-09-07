@@ -1,0 +1,86 @@
+{
+  "id": "medien-2026-09-07b",
+  "ressort": "medien",
+  "titel": "Generative Media",
+  "stand": "2026-09-07",
+  "zeile": "Fünf neue Änderungen bei Video, Bild und Audio.",
+  "status": "live",
+  "rhythmus": "wöchentlich, montags",
+  "ausgabe": "KW 37 (Nachtrag)",
+  "naechste": "2026-09-14",
+  "schlagzeile": "Mehr Reichweite, neue Werkzeuge",
+  "lede": "Fünf datierte Änderungen seit der letzten Ausgabe verteilen sich auf Video, Bild und Musik. Runway nimmt mit WAN 3.0 und Metas Muse Image zwei neue Modelle auf, Higgsfield eröffnet mit 3D Jutsu einen Prompt-zu-3D-Workflow, und Krea lässt sich jetzt direkt aus ChatGPT heraus bedienen. Bei Musik erreicht Googles Lyria 3.5 die Gemini-App und -API.",
+  "bilanz": "Video 2 · Bild 2 · Musik/Audio 1",
+  "bilanzRechts": "",
+  "zeilen": [
+    {
+      "kategorie": "Video",
+      "art": "Release",
+      "datum": "2026-08-26",
+      "titel": "WAN 3.0 bringt 30 Sekunden Video mit nativem Ton",
+      "text": "Runway Dev hat Alibabas WAN 3.0 aufgenommen. Das Modell erzeugt aus Text oder einem Startbild bis zu 30 Sekunden Video mit nativem Audio, unterstützt Keyframe-Fixierung und referenzgeführte Einstellungen in 480p bis 1080p und wird mit 5 bis 20 Credits je Sekunde abgerechnet.",
+      "linkLabel": "Runway API Changelog",
+      "href": "https://docs.dev.runwayml.com/api-details/api_changelog/"
+    },
+    {
+      "kategorie": "Bild",
+      "art": "Release",
+      "datum": "2026-08-26",
+      "titel": "Metas Muse Image kommt zu Runway Dev",
+      "text": "Runway Dev hat Metas Bildmodell Muse Image freigeschaltet. Es verarbeitet Prompts bis 4.000 Zeichen und bis zu 10 Referenzbilder, bietet acht Seitenverhältnisse plus Automatikmodus und wird mit 1 Credit je Bild abgerechnet.",
+      "linkLabel": "Runway API Changelog",
+      "href": "https://docs.dev.runwayml.com/api-details/api_changelog/"
+    },
+    {
+      "kategorie": "Video",
+      "art": "Release",
+      "datum": "2026-09-05",
+      "titel": "Higgsfield startet 3D-Werkstatt aus Text-Prompts",
+      "text": "Higgsfield hat 3D Jutsu veröffentlicht: Ein Text-Prompt wird zu einer editierbaren 3D-Szene mit Objekten, Licht, Kamera und Animation, die aus demselben Chat heraus zu Video gerendert wird. Nutzer können GLB-Assets und Mixamo-Figuren importieren und mit Zeitleiste sowie Kamerafahrten animieren; der Export erfolgt als MP4, Einzelbild oder GLB.",
+      "linkLabel": "Higgsfield 3D Jutsu",
+      "href": "https://higgsfield.ai/blog/higgsfield-3d-jutsu"
+    },
+    {
+      "kategorie": "Bild",
+      "art": "Workflow",
+      "datum": "2026-09-01",
+      "titel": "Krea lässt sich jetzt direkt in ChatGPT nutzen",
+      "text": "Das Krea-Plugin ist in ChatGPT freigeschaltet. Nach Anmeldung mit dem Krea-Konto lassen sich Bilder und Videos direkt aus dem Chat heraus erzeugen, ohne separaten Tab oder ein eigenes Dashboard.",
+      "linkLabel": "Krea Changelog",
+      "href": "https://www.krea.ai/docs/changelog"
+    },
+    {
+      "kategorie": "Musik/Audio",
+      "art": "Update",
+      "datum": "2026-09-04",
+      "titel": "Lyria 3.5 erreicht Gemini-App und Gemini-API",
+      "text": "Google hat Lyria 3.5 über die Gemini-App, die Gemini-API, Google AI Studio und Google Vids hinaus verfügbar gemacht; zuvor lief das Modell seit dem 29. Juli nur in Flow Music. Aus Text- oder Bildvorgaben entstehen Stücke bis 3 Minuten Länge mit 44,1-kHz-Stereo-Audio, Gesang und vollständiger Instrumentierung.",
+      "linkLabel": "Google Blog — Gemini App",
+      "href": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
+    }
+  ],
+  "imBlick": [
+    {
+      "was": "Modell-Abkündigungen bei Krea",
+      "stand": "Reve-Bildmodelle seit 31.08.2026 eingestellt; Veo 2 und Veo 3 abgekündigt zugunsten Veo 3.1 (Krea Changelog, 28.–31.08.2026)"
+    }
+  ],
+  "quellen": [
+    {
+      "label": "Runway API Changelog",
+      "href": "https://docs.dev.runwayml.com/api-details/api_changelog/"
+    },
+    {
+      "label": "Higgsfield Blog",
+      "href": "https://higgsfield.ai/blog/higgsfield-3d-jutsu"
+    },
+    {
+      "label": "Krea Changelog",
+      "href": "https://www.krea.ai/docs/changelog"
+    },
+    {
+      "label": "Google Blog — Gemini App",
+      "href": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
+    }
+  ]
+}
