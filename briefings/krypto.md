@@ -7,10 +7,23 @@ status: entwurf
 
 ## Quellen
 
-- Gepflegte Krypto-Watchlist (Coin, optional Ticker)
+- Gepflegte Krypto-Watchlist (siehe Abschnitt „Krypto-Watchlist")
 - [CoinGecko](https://www.coingecko.com/)
 - [Bitcoin Core Releases](https://github.com/bitcoin/bitcoin/releases)
 - [SEC Press Releases](https://www.sec.gov/newsroom/press-releases)
+
+## Krypto-Watchlist
+
+| Coin | Ticker |
+| --- | --- |
+| Bitcoin | BTC |
+| BNB | BNB |
+| Ethereum | ETH |
+| TRON | TRX |
+| Cardano | ADA |
+| Solana | SOL |
+| Stellar | XLM |
+| Polkadot | DOT |
 
 ## Auftrag
 
@@ -43,4 +56,3 @@ Wiederholung ohne neue Entwicklung.
 
 Sachlich, knapp und nachvollziehbar. Keine Anlageempfehlungen, Kursziele oder
 Prognosen. Keine Depotwerte, Stückzahlen, Einstandskurse oder Euro-Gewinne.
-

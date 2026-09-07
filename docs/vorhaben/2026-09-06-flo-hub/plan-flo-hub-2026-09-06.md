@@ -15,7 +15,7 @@ anzufassen.
   und für Suchmaschinen gesperrt.
 - **C** ✅ — Für jedes der fünf Ressorts entsteht die Arbeitsanweisung, nach der
   recherchiert wird.
-- **D** `[Kern]` `Risiko: hoch` — Ein Lauf macht aus einer Anweisung eine
+- **D** ✅ `[Kern]` `Risiko: hoch` — Ein Lauf macht aus einer Anweisung eine
   fertige Ausgabe und stellt sie auf die Seite.
 - **E** `Risiko: hoch` — Die Läufe starten von allein, zur richtigen Zeit, ohne
   dass Flo etwas anklickt.
@@ -142,29 +142,29 @@ liegen noch nicht vor. Fehlen sie, bleiben die betroffenen Ressorts auf
       Ticker), Coins, Reiseziele mit Zeitraum. Keine Stückzahlen, keine
       Beträge.
 
-## Block D — Der Lauf [Kern]
+## Block D — Der Lauf [Kern] ✅
 
 **Abhängigkeit:** Block C
 **Risiko:** hoch
 **Kontext:** `briefings/`, `ausgaben/`, `build/schema.md`, `build/build.py`
 **Offene Entscheidungen:** —
 
-- [ ] **D1** Ein Lauf-Prompt in `build/lauf.md` beschreibt den vollständigen
+- [x] **D1** Ein Lauf-Prompt in `build/lauf.md` beschreibt den vollständigen
       Ablauf für ein beliebiges Ressort: Briefing lesen, letzte Ausgabe des
       Ressorts aus `ausgaben/<ressort>/` laden, recherchieren, neue Ausgabe
       als JSON nach Schema schreiben, Seite bauen, committen. Das Ressort ist
       der einzige Parameter.
-- [ ] **D2** Der Lauf meldet nur Veränderungen: Was in einer der letzten acht
+- [x] **D2** Der Lauf meldet nur Veränderungen: Was in einer der letzten acht
       Ausgaben desselben Ressorts schon berichtet wurde, erscheint nicht
       erneut als Neuigkeit. Nachweis: zwei Läufe desselben Ressorts
       hintereinander; der zweite wiederholt keine Meldung des ersten.
-- [ ] **D3** Ein Lauf ohne belastbare Funde erzeugt trotzdem eine gültige,
+- [x] **D3** Ein Lauf ohne belastbare Funde erzeugt trotzdem eine gültige,
       kurze Ausgabe, die genau das sagt — statt keiner Ausgabe oder einer
       erfundenen. Nachweis: Lauf mit künstlich leerem Rechercheergebnis.
-- [ ] **D4** Ein Lauf für `medien` läuft von Hand durch und erzeugt eine
+- [x] **D4** Ein Lauf für `medien` läuft von Hand durch und erzeugt eine
       Ausgabe, die auf der gebauten Seite korrekt erscheint. Sie startet als
       frische Baseline, ohne Bezug auf die Claude-App-Historie.
-- [ ] **D5** Ein fehlgeschlagener Lauf hinterlässt keine halbe Ausgabe und
+- [x] **D5** Ein fehlgeschlagener Lauf hinterlässt keine halbe Ausgabe und
       keinen kaputten Stand auf der Seite. Nachweis: Abbruch mitten im Lauf,
       danach ist die Seite unverändert und lauffähig.
 

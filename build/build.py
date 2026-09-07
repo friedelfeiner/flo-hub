@@ -43,9 +43,6 @@ RESSORTS = [
 ]
 RESSORT_LABEL = dict(RESSORTS)
 
-BUILD_DATUM = "2026-09-06"
-
-
 def e(value) -> str:
     """HTML-escape fuer Textinhalte."""
     return html.escape("" if value is None else str(value), quote=True)
@@ -429,11 +426,11 @@ def render_archiv(entries, fp):
     </div>"""
 
 
-def render_left(latest, entries, active_id, fp):
+def render_left(latest, entries, active_id, fp, build_datum):
     return f"""  <aside class="seite">
     <div class="kopfzeile rule3">
       <div class="marke">Artefakt</div>
-      <div class="label" style="margin-top: var(--space-1);">Berichtsmappe &middot; {e(BUILD_DATUM)}</div>
+      <div class="label" style="margin-top: var(--space-1);">Berichtsmappe &middot; {e(build_datum)}</div>
     </div>
 
     <h2 class="label block-titel">Aktuell</h2>
@@ -605,10 +602,11 @@ def build():
 
     latest = latest_per_ressort(reports)
     entries = archive_entries(reports)
+    build_datum = max(str(r.get("stand", "")) for r in reports)
 
     # Einzelseiten je Bericht.
     for r in reports:
-        left = render_left(latest, entries, r.get("id"), fp="../")
+        left = render_left(latest, entries, r.get("id"), fp="../", build_datum=build_datum)
         right = render_report(r)
         write(
             os.path.join(SITE, "berichte", f"{r['id']}.html"),
@@ -619,7 +617,7 @@ def build():
     live = [r for r in reports if r.get("status") == "live"]
     pool = live or reports
     start = max(pool, key=lambda r: str(r.get("stand", "")))
-    left = render_left(latest, entries, start.get("id"), fp="")
+    left = render_left(latest, entries, start.get("id"), fp="", build_datum=build_datum)
     right = render_report(start)
     write(os.path.join(SITE, "index.html"), page(start.get("titel", "Artefakt"), "", left, right))
 

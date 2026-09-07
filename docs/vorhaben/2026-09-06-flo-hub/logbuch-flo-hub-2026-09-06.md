@@ -53,3 +53,24 @@ Lokale Prüfung: alle fünf Briefings vorhanden und nicht leer; Frontmatter sowi
 | Gesamtsumme | Telemetrie | 3 | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar |
 
 Telemetrie, keine Credits-/Euro-Abrechnung. `neue Tokens` = ungecachte Eingabe + Ausgabe; wiederholter gecachter Kontext und technische Anforderungstokens werden getrennt geführt. Für diese lokalen Agentensitzungen waren keine Tokenwerte im Ergebnis verfügbar.
+
+## Block D — Der Lauf (Kern, Risiko: hoch) · 2026-09-07
+
+D1  Gebaut — Berta (gpt-5.6-sol): `build/lauf.md` als Ein-Parameter-Anweisung mit Briefing, letzter Acht-Ausgaben-Historie, Recherche, temporärem JSON, isoliertem Bau und gezieltem Commit  ·  Geprüft — Klara (gpt-5.6-sol): passt
+D2  Gebaut — Berta (gpt-5.6-sol): semantische Ausschlussregel über die letzten acht Ausgaben; zwei lokale Medienläufe mit identischem zweiten Fundsatz ergaben keine Wiederholung und einen Leerfund  ·  Geprüft — Klara (gpt-5.6-sol): passt mit Anmerkung (Paraphrasen sind als klare Promptregel abgesichert, aber nicht maschinell entschieden)
+D3  Gebaut — Berta (gpt-5.6-sol): künstlicher Leerfund erzeugt eine kurze, vollständige Ausgabe mit leeren `zeilen`  ·  Geprüft — Klara (gpt-5.6-sol): passt (unabhängig im temporären Stand als JSON und HTML gebaut)
+D4  Gebaut — Berta (gpt-5.6-sol): frische Medienbaseline `medien-2026-09-07` mit fünf datierten Primärquellen-Meldungen; lokale Seite neu gebaut  ·  Geprüft — Klara (gpt-5.6-sol): passt nach engem Fix: `build.py` leitet das sichtbare Baudatum aus dem neuesten Ausgabe-`stand` ab, alle sieben HTML-Seiten zeigen 2026-09-07
+D5  Gebaut — Berta (gpt-5.6-sol): Abbruch im isolierten temporären Build getestet  ·  Geprüft — Klara (gpt-5.6-sol): passt (produktiver `site/`-Hash unverändert, danach Seiten und Links valide)
+
+Lokale Prüfung: JSON-Pflichtfelder, ISO-Daten, Inhaltsgrenzen, lokale Links, `noindex`, `python3 -m py_compile build/build.py` und `git diff --check` erfolgreich. CNAME, `robots.txt` und lokale Fonts blieben unverändert. Kein Push, keine Veröffentlichung und kein kostenpflichtiger Lauf.
+
+Begleitend gespeichert: Flos Watchlists und Quellen-/Reiselisten-Änderungen in vier Briefings. Die Reisezeiträume stehen noch auf „offen“; deshalb bleibt Reisen Entwurf. C5 bleibt offen, bis Reiseziele mit Zeiträumen hinterlegt sind.
+
+| Agent | Rolle | Sitzungen | total_tokens | ungecachte Eingabe | gecachte Eingabe | Ausgabe | Reasoning-Tokens | neue Tokens | technische Anforderungstokens |
+| :--- | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Orchestrierung (Codex) | Blocksteuerung | 1 | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar |
+| Berta (gpt-5.6-sol) | Umsetzung D1–D5 und enger D4-Fix | 2 | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar |
+| Klara (gpt-5.6-sol) | unabhängige Prüfung und D4-Nachprüfung | 2 | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar |
+| Gesamtsumme | Telemetrie | 5 | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar |
+
+Telemetrie, keine Credits-/Euro-Abrechnung. `neue Tokens` = ungecachte Eingabe + Ausgabe; wiederholter gecachter Kontext und technische Anforderungstokens werden getrennt geführt. Für diese lokalen Agentensitzungen waren keine Tokenwerte im Ergebnis verfügbar.

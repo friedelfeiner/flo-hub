@@ -1,0 +1,81 @@
+{
+  "id": "medien-2026-09-07",
+  "ressort": "medien",
+  "titel": "Generative Media",
+  "stand": "2026-09-07",
+  "zeile": "Fünf belastbare Änderungen bei Video, Bild und Audio.",
+  "status": "live",
+  "rhythmus": "wöchentlich, montags",
+  "ausgabe": "KW 37",
+  "naechste": "2026-09-14",
+  "schlagzeile": "Mehr Kontrolle über Bild und Bewegung",
+  "lede": "Die frische Baseline bündelt fünf datierte Änderungen aus den beobachteten Primärquellen. Video dominiert mit einem neuen Modellzugang, lokaler Bearbeitung im Clip und einem HDR-Format für die Weiterverarbeitung. Bei Bild und Audio geht es um präzisere Gestaltung im bestehenden Arbeitsablauf.",
+  "bilanz": "Video 3 · Bild 1 · Musik/Audio 1",
+  "bilanzRechts": "Frische Baseline",
+  "zeilen": [
+    {
+      "kategorie": "Video",
+      "art": "Release",
+      "datum": "2026-09-03",
+      "titel": "MiniMax H3 Max ist über Runway Dev verfügbar",
+      "text": "Runway Dev hat MiniMax H3 Max für Text-zu-Video und Bild-zu-Video freigeschaltet. Das Modell erzeugt Clips von 5 bis 15 Sekunden in 480p oder 768p, kann ein optionales Schlussbild verwenden und erlaubt, die automatische Prompt-Erweiterung abzuschalten oder in zwei Stufen zu nutzen.",
+      "linkLabel": "Runway API Changelog",
+      "href": "https://docs.dev.runwayml.com/api-details/api_changelog/"
+    },
+    {
+      "kategorie": "Video",
+      "art": "Werkzeug",
+      "datum": "2026-08-31",
+      "titel": "Genjutsu bearbeitet ausgewählte Elemente eines Clips",
+      "text": "Higgsfield hat Genjutsu mit Motion Transfer und Object Swap veröffentlicht. Ein Eingangsvideo von 4 bis 30 Sekunden kann mit bis zu 30 Referenzbildern gesteuert werden; Bewegung oder einzelne Bildelemente lassen sich verändern, während der übrige Aufbau des Ausgangsclips erhalten bleiben soll. Die Ausgabe reicht bis 1080p.",
+      "linkLabel": "Higgsfield Genjutsu",
+      "href": "https://higgsfield.ai/blog/higgsfield-genjutsu"
+    },
+    {
+      "kategorie": "Video",
+      "art": "Workflow",
+      "datum": "2026-08-31",
+      "titel": "Runway liefert HDR-Video als ACEScg-EXR-Sequenz",
+      "text": "Runway Dev kann HDR-Ausgaben von Video-to-HDR und Gen-4.5 nun als szenenbezogene ACEScg-OpenEXR-Sequenzen für ACES 1.3 oder 2.0 ausgeben. Damit lässt sich das Material ohne vorgelagerten Farbraum-Umbau in entsprechend konfigurierte Compositing-Projekte übernehmen.",
+      "linkLabel": "Runway API Changelog",
+      "href": "https://docs.dev.runwayml.com/api-details/api_changelog/"
+    },
+    {
+      "kategorie": "Bild",
+      "art": "Release",
+      "datum": "2026-08-26",
+      "titel": "Recraft V4 kommt in drei Varianten zu Higgsfield",
+      "text": "Higgsfield hat Recraft V4.1, Recraft Styles und Recraft Utility eingebunden. V4.1 und Utility bieten Raster- oder Vektorausgabe sowie Farbsteuerung; Styles nimmt 1 bis 10 Referenzbilder und trennt präzise von flexibler Stilübertragung. Die Varianten teilen damit Exploration, Stiltreue und kontrollierte Produktgestaltung auf.",
+      "linkLabel": "Higgsfield zu Recraft V4",
+      "href": "https://higgsfield.ai/blog/recraft-v4-higgsfield"
+    },
+    {
+      "kategorie": "Musik/Audio",
+      "art": "Update",
+      "datum": "2026-09-02",
+      "titel": "Suno Studio reagiert im Chat auf Tempoänderungen",
+      "text": "Suno hat den Chat in Studio 2.0 um BPM-Kontext und die Verarbeitung von Tempoänderungen ergänzt. Prompt-Bearbeitungen lassen sich nun rückgängig machen; Plugins können per Ziehen zwischen Spuren kopiert oder auf derselben Spur dupliziert werden.",
+      "linkLabel": "Suno Release Notes",
+      "href": "https://suno.com/release-notes"
+    }
+  ],
+  "imBlick": [],
+  "quellen": [
+    {
+      "label": "Runway API Changelog",
+      "href": "https://docs.dev.runwayml.com/api-details/api_changelog/"
+    },
+    {
+      "label": "Higgsfield Genjutsu",
+      "href": "https://higgsfield.ai/blog/higgsfield-genjutsu"
+    },
+    {
+      "label": "Higgsfield Recraft V4",
+      "href": "https://higgsfield.ai/blog/recraft-v4-higgsfield"
+    },
+    {
+      "label": "Suno Release Notes",
+      "href": "https://suno.com/release-notes"
+    }
+  ]
+}
