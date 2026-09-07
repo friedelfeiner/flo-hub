@@ -1,0 +1,7 @@
+# Diese Seite ist oeffentlich erreichbar, aber nicht fuer Suchmaschinen gedacht.
+# Der Schutz ist: Link nicht weitergeben + nicht indexiert werden.
+# Ergaenzend traegt jede erzeugte HTML-Seite
+# <meta name="robots" content="noindex, nofollow"> im <head>.
+
+User-agent: *
+Disallow: /

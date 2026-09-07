@@ -8,6 +8,13 @@ komplette statische Seite nach ``site/``. Nur Standardbibliothek.
 - ``site/berichte/<id>.html``  -- je Ausgabe eine Seite mit derselben
                                   linken Spalte und dem jeweiligen Bericht rechts.
 
+Jede erzeugte Seite traegt ``<meta name="robots" content="noindex, nofollow">``
+im ``<head>`` (siehe :func:`page`). Dazu gehoert ``site/robots.txt``: die Datei
+liegt statisch im Repo und wird hier bewusst nicht erzeugt -- der Bau schreibt
+nur die HTML-Dateien und loescht nichts, ``site/robots.txt`` bleibt also
+unangetastet. Wer den Bau spaeter um ein Aufraeumen von ``site/`` erweitert,
+muss ``robots.txt`` davon ausnehmen.
+
 Farben, Schriften, Raster und Aufbau folgen
 ``docs/vorhaben/2026-09-06-flo-hub/design-artefakt-2026-09-06.md``.
 Die Schriften Cormorant Garamond und Lora liegen lokal unter ``site/fonts/``
@@ -569,6 +576,7 @@ def page(title, fp, left, right):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>{e(title)} &middot; Artefakt</title>
 <style>{css(fp)}</style>
 </head>

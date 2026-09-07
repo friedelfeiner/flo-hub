@@ -101,10 +101,10 @@ ist.
       auf GitHub Pages.
 - [ ] **B2** Die gebaute Seite ist über `hub.floachleitner.com` mit gültigem
       HTTPS-Zertifikat erreichbar.
-- [ ] **B3** `site/robots.txt` sperrt alle Bots, und jede erzeugte Seite trägt
+- [x] **B3** `site/robots.txt` sperrt alle Bots, und jede erzeugte Seite trägt
       `<meta name="robots" content="noindex, nofollow">`. Nachweis: beides im
       ausgelieferten Stand abrufbar.
-- [ ] **B4** Ein `git log -p`-Durchlauf über das gesamte Repo enthält keine
+- [x] **B4** Ein `git log -p`-Durchlauf über das gesamte Repo enthält keine
       Stückzahlen, Beträge oder Einstandskurse — auch nicht in gelöschten
       Ständen. Nachweis vor dem ersten Push, weil Git-Historie sich nicht
       sauber zurücknehmen lässt.
