@@ -1,0 +1,65 @@
+{
+  "id": "reisen-beispiel",
+  "ressort": "reisen",
+  "titel": "Reisen",
+  "stand": "2026-09-06",
+  "zeile": "Beispielansicht — kommt inhaltlich in Stufe 2.",
+  "status": "entwurf",
+  "rhythmus": "kommt in Stufe 2",
+  "ausgabe": "Entwurf",
+  "naechste": "offen",
+  "schlagzeile": "Preise, Fristen und Störungen",
+  "lede": "Stufe 1 beschränkt sich auf den engsten Teil: Preise, Fristen und Störungen für konkret geplante Reisen. Das setzt eine gepflegte Liste aus Ziel und Zeitraum voraus. Inspiration und die Ablage eigener Reisen bleiben Stufe 2.",
+  "bilanz": "Reisen 0 · Fristen 0",
+  "bilanzRechts": "",
+  "zeilen": [
+    {
+      "kategorie": "Preis",
+      "art": "Beispiel",
+      "datum": "2026-09-06",
+      "titel": "Platzhalter für eine Preiszeile",
+      "text": "Hier stünde je beobachteter Strecke der aktuelle Preis mit dem zuletzt notierten Preis daneben."
+    },
+    {
+      "kategorie": "Frist",
+      "art": "Beispiel",
+      "datum": "2026-09-06",
+      "titel": "Platzhalter für eine Frist",
+      "text": "Hier stünde eine Frist der nächsten neunzig Tage: Stornogrenze, Anmeldeschluss, Visumfenster."
+    }
+  ],
+  "plan": {
+    "quellen": [
+      "Preisportale und Airline-Seiten für die beobachteten Strecken",
+      "Bahn- und Fernbus-Anbieter der betroffenen Länder",
+      "Auswärtiges Amt — Reise- und Sicherheitshinweise",
+      "Betreiber-Statusseiten (Flughäfen, Bahn) für Störungen",
+      "Buchungsbestätigungen mit Stornogrenzen und Fristen"
+    ],
+    "aufbau": [
+      {
+        "label": "Reiseliste",
+        "text": "Je geplante Reise ein Block: Ziel und Zeitraum."
+      },
+      {
+        "label": "Preise",
+        "text": "Preisverlauf beobachteter Strecken, aktueller Wert gegen letzten Wert."
+      },
+      {
+        "label": "Fristen",
+        "text": "Alles Fristgebundene der nächsten neunzig Tage."
+      },
+      {
+        "label": "Störungen",
+        "text": "Aktuelle Störungen auf betroffenen Strecken, mit Quelle und Datum."
+      }
+    ]
+  },
+  "imBlick": [],
+  "quellen": [
+    {
+      "label": "Auswärtiges Amt",
+      "href": "https://www.auswaertiges-amt.de"
+    }
+  ]
+}

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitcoin &amp; Krypto &middot; Artefakt</title>
+<style>
+/* Schriften lokal, OFL -- siehe site/fonts/OFL-*.txt */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/CormorantGaramond-var.ttf') format('truetype');
+  font-weight: 300 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-var.ttf') format('truetype');
+  font-weight: 400 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-Italic-var.ttf') format('truetype');
+  font-weight: 400 700; font-style: italic; font-display: swap;
+}
+
+:root {
+  --color-bg: #f4f0e7;
+  --color-surface: #eae9e9;
+  --color-text: #201f1d;
+  --color-accent: #b68235;
+  --color-divider: rgba(32, 31, 29, 0.16);
+  --color-accent-bg: rgba(182, 130, 53, 0.10);
+
+  --space-1: 4.6px;
+  --space-2: 9.2px;
+  --space-3: 13.8px;
+  --space-4: 18.4px;
+  --space-5: 23px;
+  --space-6: 27.6px;
+  --space-7: 32.2px;
+  --space-8: 36.8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.55;
+  font-feature-settings: 'tnum';
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .label, .schlagzeile, .marke {
+  font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+}
+
+a { color: var(--color-text); text-decoration-color: var(--color-divider); overflow-wrap: anywhere; }
+a:hover { text-decoration-color: var(--color-accent); }
+
+.label {
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6a655c;
+  font-weight: 600;
+}
+
+.rule3 { border-top: 3px solid var(--color-text); }
+.hair { border-top: 1px solid var(--color-divider); }
+
+/* ---- Grundraster ------------------------------------------------------- */
+.wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: var(--space-8);
+  padding: var(--space-6) var(--space-6) var(--space-8);
+  align-items: start;
+}
+
+/* ---- Linke Spalte ---------------------------------------------------- */
+.seite {
+  position: sticky;
+  top: var(--space-4);
+  align-self: start;
+  max-height: calc(100vh - var(--space-6));
+  overflow: auto;
+  min-width: 0;
+}
+
+.seite .marke { font-size: 30px; font-weight: 400; margin: var(--space-2) 0 0; }
+.seite .kopfzeile { margin-bottom: var(--space-5); }
+
+.block-titel { margin: var(--space-5) 0 var(--space-2); }
+
+.aktuell-eintrag {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border-left: 2px solid transparent;
+  text-decoration: none;
+  margin-bottom: var(--space-1);
+}
+.aktuell-eintrag:hover { background: var(--color-surface); }
+.aktuell-eintrag.aktiv {
+  border-left-color: var(--color-accent);
+  background: var(--color-accent-bg);
+}
+.aktuell-eintrag .zeile-titel {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 17px;
+  display: block;
+  margin: 2px 0;
+}
+.aktuell-eintrag .aufmacher { font-size: 13px; color: #4b473f; display: block; }
+.aktuell-eintrag .meta { font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #6a655c; }
+.tag { font-style: italic; letter-spacing: 0; text-transform: none; }
+
+/* Archiv: Filter per reinem CSS (Radio + Geschwister-Selektor) */
+.archiv .filter { position: absolute; opacity: 0; pointer-events: none; }
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-bottom: var(--space-3); }
+.chips label {
+  font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 3px var(--space-2); border: 1px solid var(--color-divider);
+  cursor: pointer; color: #6a655c; user-select: none;
+}
+.archiv-liste .eintrag { display: none; }
+.archiv-liste .eintrag {
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--color-divider);
+  font-size: 13px;
+}
+.archiv-liste .eintrag .a-datum { color: #6a655c; font-feature-settings: 'tnum'; }
+.archiv-liste .eintrag .a-meta { font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #6a655c; }
+
+#rf-all:checked ~ .archiv-liste .eintrag { display: block; }
+#rf-all:checked ~ .chips label[for='rf-all'] { color: var(--color-text); border-color: var(--color-accent); background: var(--color-accent-bg); }
+#rf-medien:checked ~ .archiv-liste .eintrag[data-ressort='medien'] { display: block; }
+#rf-medien:checked ~ .chips label[for='rf-medien'] { color: var(--color-text); border-color: var(--color-accent); background: var(--color-accent-bg); }
+#rf-welt:checked ~ .archiv-liste .eintrag[data-ressort='welt'] { display: block; }
+#rf-welt:checked ~ .chips label[for='rf-welt'] { color: var(--color-text); border-color: var(--color-accent); background: var(--color-accent-bg); }
+#rf-krypto:checked ~ .archiv-liste .eintrag[data-ressort='krypto'] { display: block; }
+#rf-krypto:checked ~ .chips label[for='rf-krypto'] { color: var(--color-text); border-color: var(--color-accent); background: var(--color-accent-bg); }
+#rf-finanzen:checked ~ .archiv-liste .eintrag[data-ressort='finanzen'] { display: block; }
+#rf-finanzen:checked ~ .chips label[for='rf-finanzen'] { color: var(--color-text); border-color: var(--color-accent); background: var(--color-accent-bg); }
+#rf-reisen:checked ~ .archiv-liste .eintrag[data-ressort='reisen'] { display: block; }
+#rf-reisen:checked ~ .chips label[for='rf-reisen'] { color: var(--color-text); border-color: var(--color-accent); background: var(--color-accent-bg); }
+
+
+.seite .fuss { margin-top: var(--space-5); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; display: flex; gap: var(--space-4); }
+
+/* ---- Rechte Spalte -- der Bericht ---------------------------------- */
+.bericht { min-width: 0; max-width: 820px; }
+
+.bericht .kopf {
+  display: flex; justify-content: space-between; gap: var(--space-4);
+  padding-top: var(--space-2); flex-wrap: wrap;
+}
+
+.schlagzeile {
+  font-size: 46px; font-weight: 400; margin: var(--space-4) 0 var(--space-4);
+  max-width: 20ch;
+}
+
+.lede {
+  font-size: 16.5px; line-height: 1.72; text-align: justify;
+  hyphens: auto; text-wrap: pretty; overflow-wrap: break-word; max-width: 64ch;
+  margin: 0 0 var(--space-5);
+}
+
+.bilanz {
+  display: flex; justify-content: space-between; gap: var(--space-4);
+  padding: var(--space-3) 0; margin: var(--space-4) 0;
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  flex-wrap: wrap;
+}
+.bilanz .rechts { color: var(--color-accent); }
+
+.hinweis-beispiel {
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-accent); margin: var(--space-4) 0 var(--space-2);
+}
+
+.zeile {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: var(--space-4);
+  padding: var(--space-5) 0;
+  border-top: 1px solid var(--color-divider);
+}
+.zeile .meta {
+  font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: #6a655c;
+}
+.zeile .meta span { display: block; margin-bottom: 2px; }
+.zeile .inhalt {
+  border-left: 1px solid var(--color-divider);
+  padding-left: var(--space-4);
+  min-width: 0;
+}
+.zeile .inhalt h3 { font-size: 23px; font-weight: 400; margin: 0 0 var(--space-2); }
+.zeile .inhalt p { margin: 0; text-align: justify; hyphens: auto; text-wrap: pretty; overflow-wrap: break-word; font-size: 15.5px; }
+.zeile .quelle { display: inline-block; margin-top: var(--space-2); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; }
+.zeile .quelle::after { content: ' \2192'; }
+
+.bauplan {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6); margin: var(--space-6) 0 var(--space-4);
+  padding-top: var(--space-5); border-top: 3px solid var(--color-text);
+}
+.bauplan ul { margin: var(--space-2) 0 0; padding-left: var(--space-4); }
+.bauplan li { margin-bottom: var(--space-1); font-size: 14px; }
+.bauplan .paar { margin-top: var(--space-2); }
+.bauplan .paar .p-label { font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #6a655c; }
+.bauplan .paar .p-text { font-size: 14px; }
+.bauplan-satz { font-style: italic; margin: var(--space-3) 0 var(--space-5); color: #4b473f; }
+
+.imblick .row {
+  display: flex; justify-content: space-between; gap: var(--space-4);
+  padding: var(--space-2) 0; border-top: 1px solid var(--color-divider);
+  font-size: 14px; flex-wrap: wrap;
+}
+.imblick .row .stand { color: #6a655c; }
+
+.quellen-liste { margin-top: var(--space-2); font-size: 13px; }
+.quellen-liste a { margin-right: var(--space-3); white-space: nowrap; }
+
+.bericht .fuss {
+  margin-top: var(--space-7); padding-top: var(--space-4);
+  border-top: 3px solid var(--color-text);
+  display: flex; justify-content: space-between; gap: var(--space-4);
+  font-size: 12px; flex-wrap: wrap;
+}
+.bericht .fuss .regeltext { max-width: 52ch; color: #4b473f; }
+.bericht .fuss .aktionen { letter-spacing: 0.12em; text-transform: uppercase; }
+.bericht .fuss .inaktiv { color: #9a948a; }
+
+/* ---- Mobil: eine Spalte ab 900px --------------------------------- */
+@media (max-width: 900px) {
+  .wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
+    padding: var(--space-4);
+  }
+  .seite {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    order: -1;
+    border-bottom: 1px solid var(--color-divider);
+    padding-bottom: var(--space-4);
+  }
+  .schlagzeile { font-size: 34px; }
+  .zeile {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-2);
+  }
+  .zeile .meta { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+  .zeile .meta span { margin-bottom: 0; }
+  .zeile .inhalt {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .bauplan { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <aside class="seite">
+    <div class="kopfzeile rule3">
+      <div class="marke">Artefakt</div>
+      <div class="label" style="margin-top: var(--space-1);">Berichtsmappe &middot; 2026-09-06</div>
+    </div>
+
+    <h2 class="label block-titel">Aktuell</h2>
+      <a class="aktuell-eintrag" href="../berichte/medien-2026-kw36.html">
+        <span class="meta">Medien &middot; 2026-09-06</span>
+        <span class="zeile-titel">Generative Media</span>
+        <span class="aufmacher">Sechs Änderungen, drei mit Auswirkung.</span>
+        <span class="meta"><span class="tag">Aktiv</span> &middot; wöchentlich, montags</span>
+      </a>
+      <a class="aktuell-eintrag" href="../berichte/welt-beispiel.html">
+        <span class="meta">Welt &middot; 2026-09-06</span>
+        <span class="zeile-titel">Weltlage</span>
+        <span class="aufmacher">Beispielansicht — Ressort noch im Entwurf.</span>
+        <span class="meta"><span class="tag">Entwurf</span> &middot; werktäglich, fertig um 7:00</span>
+      </a>
+      <a class="aktuell-eintrag aktiv" href="../berichte/krypto-beispiel.html">
+        <span class="meta">Krypto &middot; 2026-09-06</span>
+        <span class="zeile-titel">Bitcoin &amp; Krypto</span>
+        <span class="aufmacher">Beispielansicht — wartet auf die Coin-Liste.</span>
+        <span class="meta"><span class="tag">Entwurf</span> &middot; werktäglich, fertig um 7:00</span>
+      </a>
+      <a class="aktuell-eintrag" href="../berichte/finanzen-beispiel.html">
+        <span class="meta">Finanzen &middot; 2026-09-06</span>
+        <span class="zeile-titel">Finanzen &amp; Märkte</span>
+        <span class="aufmacher">Beispielansicht — wartet auf die Aktien-Liste.</span>
+        <span class="meta"><span class="tag">Entwurf</span> &middot; wöchentlich</span>
+      </a>
+      <a class="aktuell-eintrag" href="../berichte/reisen-beispiel.html">
+        <span class="meta">Reisen &middot; 2026-09-06</span>
+        <span class="zeile-titel">Reisen</span>
+        <span class="aufmacher">Beispielansicht — kommt inhaltlich in Stufe 2.</span>
+        <span class="meta"><span class="tag">Entwurf</span> &middot; kommt in Stufe 2</span>
+      </a>
+
+    <div class="archiv">
+      <h2 class="label block-titel">Archiv</h2>
+      <input class="filter" type="radio" name="rf" id="rf-all" checked>
+      <input class="filter" type="radio" name="rf" id="rf-medien">
+      <input class="filter" type="radio" name="rf" id="rf-welt">
+      <input class="filter" type="radio" name="rf" id="rf-krypto">
+      <input class="filter" type="radio" name="rf" id="rf-finanzen">
+      <input class="filter" type="radio" name="rf" id="rf-reisen">
+      <div class="chips">
+        <label for="rf-all">Alle</label>
+        <label for="rf-medien">Medien</label>
+        <label for="rf-welt">Welt</label>
+        <label for="rf-krypto">Krypto</label>
+        <label for="rf-finanzen">Finanzen</label>
+        <label for="rf-reisen">Reisen</label>
+      </div>
+      <div class="archiv-liste">
+        <a class="eintrag" data-ressort="welt" href="../berichte/welt-beispiel.html">
+          <span class="a-datum">2026-09-06</span> &mdash; So sieht die Weltlage später aus<br>
+          <span class="a-meta">Welt &middot; Mo 7. Sep</span>
+        </a>
+        <a class="eintrag" data-ressort="reisen" href="../berichte/reisen-beispiel.html">
+          <span class="a-datum">2026-09-06</span> &mdash; Preise, Fristen und Störungen<br>
+          <span class="a-meta">Reisen &middot; Entwurf</span>
+        </a>
+        <a class="eintrag" data-ressort="medien" href="../berichte/medien-2026-kw36.html">
+          <span class="a-datum">2026-09-06</span> &mdash; Bild bleibt ruhig, Video zieht an<br>
+          <span class="a-meta">Medien &middot; KW 36</span>
+        </a>
+        <a class="eintrag" data-ressort="krypto" href="../berichte/krypto-beispiel.html">
+          <span class="a-datum">2026-09-06</span> &mdash; Kursstand und Nachrichtenlage<br>
+          <span class="a-meta">Krypto &middot; Mo 7. Sep</span>
+        </a>
+        <a class="eintrag" data-ressort="finanzen" href="../berichte/finanzen-beispiel.html">
+          <span class="a-datum">2026-09-06</span> &mdash; Wochenrückblick über die Watchlist<br>
+          <span class="a-meta">Finanzen &middot; KW 36</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="fuss">
+      <span>Gesamtarchiv</span>
+      <span>Neuer Bericht</span>
+    </div>
+  </aside>
+
+  <main class="bericht">
+    <div class="kopf rule3">
+      <span class="label">Bitcoin &amp; Krypto</span>
+      <span class="label">Ausgabe Mo 7. Sep</span>
+    </div>
+
+    <h1 class="schlagzeile">Kursstand und Nachrichtenlage</h1>
+
+    <p class="lede">Kursstand sowie 24-Stunden- und 7-Tage-Veränderung für Flos Krypto-Watchlist, dazu die Nachrichtenlage zu genau diesen Coins. Zahlen stehen immer mit Vergleichswert daneben. Keine Empfehlungen, keine Kursziele. Ohne hinterlegte Coin-Liste bleibt das Ressort im Entwurf.</p>
+
+    <div class="bilanz">
+      <span class="links">Coins 0 · Meldungen 0</span>
+      <span class="rechts"></span>
+    </div>
+
+    <section class="zeilen">
+      <p class="hinweis-beispiel">Beispielinhalte zur Ansicht</p>
+      <article class="zeile">
+        <div class="meta">
+          <span>Kurs</span>
+          <span>Beispiel</span>
+          <span>2026-09-06</span>
+        </div>
+        <div class="inhalt">
+          <h3>Platzhalter für eine Kurszeile</h3>
+          <p>Hier stünde je Coin der aktuelle Kurs, die Veränderung über 24 Stunden und über 7 Tage, jeweils mit dem Vorwert daneben.</p>
+        </div>
+      </article>
+      <article class="zeile">
+        <div class="meta">
+          <span>Nachrichten</span>
+          <span>Beispiel</span>
+          <span>2026-09-06</span>
+        </div>
+        <div class="inhalt">
+          <h3>Platzhalter für eine Nachrichtenzeile</h3>
+          <p>Hier stünde eine datierte Meldung zu einem Coin der Watchlist oder seiner Branche, ohne Bewertung.</p>
+        </div>
+      </article>
+    </section>
+      <div class="bauplan">
+        <div>
+          <h3 class="label">Geplante Quellen</h3>
+          <ul>
+        <li>CoinGecko (Kursdaten)</li>
+        <li>Preisseiten der jeweiligen Projekte</li>
+        <li>Reuters / Bloomberg Krypto-Ressort</li>
+        <li>The Block</li>
+        <li>Offizielle Blogs und Statusseiten der Coins auf der Watchlist</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="label">Aufbau der Ausgabe</h3>
+        <div class="paar">
+          <div class="p-label">Kursblock</div>
+          <div class="p-text">Je Coin: Kurs, 24-Stunden- und 7-Tage-Veränderung mit Vergleichswert.</div>
+        </div>
+        <div class="paar">
+          <div class="p-label">Leitwerte</div>
+          <div class="p-text">Bitcoin und Ether als Einordnung, auch wenn nicht auf der Liste.</div>
+        </div>
+        <div class="paar">
+          <div class="p-label">Nachrichten</div>
+          <div class="p-text">Datierte Meldungen zu genau diesen Coins und ihren Branchen.</div>
+        </div>
+        <div class="paar">
+          <div class="p-label">Regel</div>
+          <div class="p-text">Keine Empfehlungen, keine Kursziele, keine Prognosen.</div>
+        </div>
+        </div>
+      </div>
+      <p class="bauplan-satz">Die Zeilen oben sind Beispielinhalte zur Ansicht &mdash; Bitcoin &amp; Krypto l&auml;uft noch nicht automatisch.</p>
+
+    <section class="quellen">
+      <h2 class="label block-titel">Quellen</h2>
+      <div class="quellen-liste">
+        <a href="https://www.coingecko.com">CoinGecko</a>
+        <a href="https://www.theblock.co">The Block</a>
+      </div>
+    </section>
+
+    <div class="fuss">
+      <span class="regeltext">Automatisch erstellt f&uuml;r Flo &middot; n&auml;chste Ausgabe 2026-09-08.
+      Meldungen ohne erkennbares Ver&ouml;ffentlichungsdatum werden nicht aufgenommen.</span>
+      <span class="aktionen"><span class="inaktiv">Als E-Mail</span> &nbsp; Quellen bearbeiten</span>
+    </div>
+  </main>
+</div>
+</body>
+</html>

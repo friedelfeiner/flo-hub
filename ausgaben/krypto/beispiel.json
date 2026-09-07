@@ -1,0 +1,69 @@
+{
+  "id": "krypto-beispiel",
+  "ressort": "krypto",
+  "titel": "Bitcoin & Krypto",
+  "stand": "2026-09-06",
+  "zeile": "Beispielansicht — wartet auf die Coin-Liste.",
+  "status": "entwurf",
+  "rhythmus": "werktäglich, fertig um 7:00",
+  "ausgabe": "Mo 7. Sep",
+  "naechste": "2026-09-08",
+  "schlagzeile": "Kursstand und Nachrichtenlage",
+  "lede": "Kursstand sowie 24-Stunden- und 7-Tage-Veränderung für Flos Krypto-Watchlist, dazu die Nachrichtenlage zu genau diesen Coins. Zahlen stehen immer mit Vergleichswert daneben. Keine Empfehlungen, keine Kursziele. Ohne hinterlegte Coin-Liste bleibt das Ressort im Entwurf.",
+  "bilanz": "Coins 0 · Meldungen 0",
+  "bilanzRechts": "",
+  "zeilen": [
+    {
+      "kategorie": "Kurs",
+      "art": "Beispiel",
+      "datum": "2026-09-06",
+      "titel": "Platzhalter für eine Kurszeile",
+      "text": "Hier stünde je Coin der aktuelle Kurs, die Veränderung über 24 Stunden und über 7 Tage, jeweils mit dem Vorwert daneben."
+    },
+    {
+      "kategorie": "Nachrichten",
+      "art": "Beispiel",
+      "datum": "2026-09-06",
+      "titel": "Platzhalter für eine Nachrichtenzeile",
+      "text": "Hier stünde eine datierte Meldung zu einem Coin der Watchlist oder seiner Branche, ohne Bewertung."
+    }
+  ],
+  "plan": {
+    "quellen": [
+      "CoinGecko (Kursdaten)",
+      "Preisseiten der jeweiligen Projekte",
+      "Reuters / Bloomberg Krypto-Ressort",
+      "The Block",
+      "Offizielle Blogs und Statusseiten der Coins auf der Watchlist"
+    ],
+    "aufbau": [
+      {
+        "label": "Kursblock",
+        "text": "Je Coin: Kurs, 24-Stunden- und 7-Tage-Veränderung mit Vergleichswert."
+      },
+      {
+        "label": "Leitwerte",
+        "text": "Bitcoin und Ether als Einordnung, auch wenn nicht auf der Liste."
+      },
+      {
+        "label": "Nachrichten",
+        "text": "Datierte Meldungen zu genau diesen Coins und ihren Branchen."
+      },
+      {
+        "label": "Regel",
+        "text": "Keine Empfehlungen, keine Kursziele, keine Prognosen."
+      }
+    ]
+  },
+  "imBlick": [],
+  "quellen": [
+    {
+      "label": "CoinGecko",
+      "href": "https://www.coingecko.com"
+    },
+    {
+      "label": "The Block",
+      "href": "https://www.theblock.co"
+    }
+  ]
+}

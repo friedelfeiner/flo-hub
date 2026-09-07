@@ -1,0 +1,73 @@
+{
+  "id": "finanzen-beispiel",
+  "ressort": "finanzen",
+  "titel": "Finanzen & Märkte",
+  "stand": "2026-09-06",
+  "zeile": "Beispielansicht — wartet auf die Aktien-Liste.",
+  "status": "entwurf",
+  "rhythmus": "wöchentlich",
+  "ausgabe": "KW 36",
+  "naechste": "2026-09-13",
+  "schlagzeile": "Wochenrückblick über die Watchlist",
+  "lede": "Wochenrückblick über Flos Aktien-Watchlist mit Wochenveränderung, dazu ein paar Leitindizes und eine Terminvorschau. Branchenschwerpunkt: Windenergie, Solar und Erneuerbare, Big Tech. Zahlen stehen immer mit Vergleichswert daneben. Keine Empfehlungen. Ohne hinterlegte Watchlist bleibt das Ressort im Entwurf.",
+  "bilanz": "Werte 0 · Indizes 0",
+  "bilanzRechts": "",
+  "zeilen": [
+    {
+      "kategorie": "Watchlist",
+      "art": "Beispiel",
+      "datum": "2026-09-05",
+      "titel": "Platzhalter für eine Wochenzeile",
+      "text": "Hier stünde je Wert die Wochenveränderung mit dem Schlusskurs der Vorwoche daneben und ein Satz dazu, was konkret passiert ist."
+    },
+    {
+      "kategorie": "Branche",
+      "art": "Beispiel",
+      "datum": "2026-09-04",
+      "titel": "Platzhalter Windenergie / Solar / Big Tech",
+      "text": "Hier stünde eine datierte Branchenmeldung aus einem der drei Schwerpunkte, ohne Bewertung und ohne Prognose."
+    }
+  ],
+  "plan": {
+    "quellen": [
+      "Börsenpflichtmitteilungen der Unternehmen (Investor-Relations-Seiten)",
+      "Reuters Markets / Bloomberg",
+      "Handelsblatt Finanzen",
+      "Index-Anbieter (Deutsche Börse, S&P Dow Jones)",
+      "Branchendienste zu Windenergie, Solar und Big Tech"
+    ],
+    "aufbau": [
+      {
+        "label": "Watchlist",
+        "text": "Rund 20 Werte mit Wochenveränderung und Vorwochenwert."
+      },
+      {
+        "label": "Leitindizes",
+        "text": "DAX, S&P 500, Nasdaq 100 als Einordnung."
+      },
+      {
+        "label": "Branchen",
+        "text": "Windenergie, Solar/Erneuerbare, Big Tech — was die Woche geprägt hat."
+      },
+      {
+        "label": "Termine",
+        "text": "Vorschau auf Zahlen, Hauptversammlungen und Notenbanktermine der kommenden Woche."
+      },
+      {
+        "label": "Regel",
+        "text": "Preise alt zu neu, keine Prozent-ohne-Bezug, keine Empfehlungen."
+      }
+    ]
+  },
+  "imBlick": [],
+  "quellen": [
+    {
+      "label": "Reuters Markets",
+      "href": "https://www.reuters.com/markets"
+    },
+    {
+      "label": "Deutsche Börse",
+      "href": "https://www.deutsche-boerse.com"
+    }
+  ]
+}

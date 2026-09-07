@@ -1,0 +1,93 @@
+{
+  "id": "medien-2026-kw36",
+  "ressort": "medien",
+  "titel": "Generative Media",
+  "stand": "2026-09-06",
+  "zeile": "Sechs Änderungen, drei mit Auswirkung.",
+  "status": "live",
+  "rhythmus": "wöchentlich, montags",
+  "ausgabe": "KW 36",
+  "naechste": "2026-09-14",
+  "schlagzeile": "Bild bleibt ruhig, Video zieht an",
+  "lede": "Sechs dokumentierte Änderungen bei den beobachteten Anbietern, drei davon mit spürbarer Auswirkung auf die Arbeit. Der Schwerpunkt liegt bei Video: längere Clips und striktere Herkunftskennzeichnung. Bei Musik und Audio gab es diese Woche keinen Anlass.",
+  "bilanz": "Video 3 · Bild 2 · Musik 1",
+  "bilanzRechts": "2 offen",
+  "zeilen": [
+    {
+      "kategorie": "Video",
+      "art": "Update",
+      "datum": "2026-09-04",
+      "titel": "Maximale Cliplänge steigt von 8 auf 16 Sekunden",
+      "text": "Der Anbieter hat die maximale Länge je Generierung von 8 auf 16 Sekunden angehoben. Auflösung und Bildrate bleiben unverändert. Für längere Szenen entfällt damit ein Schnitt, die Wartezeit je Clip verdoppelt sich in etwa.",
+      "linkLabel": "Änderungsprotokoll",
+      "href": "https://example.com/changelog/video-16s"
+    },
+    {
+      "kategorie": "Video",
+      "art": "Richtlinie",
+      "datum": "2026-09-03",
+      "titel": "Sichtbare Herkunftskennzeichnung wird Pflicht",
+      "text": "Ab sofort trägt jeder Export eine sichtbare Kennzeichnung als KI-erzeugt, zusätzlich zu den bisher schon eingebetteten C2PA-Metadaten. Die sichtbare Marke lässt sich in bezahlten Tarifen ausblenden, die Metadaten nicht.",
+      "linkLabel": "Ankündigung",
+      "href": "https://example.com/blog/provenance-visible"
+    },
+    {
+      "kategorie": "Video",
+      "art": "Beobachtung",
+      "datum": "2026-09-02",
+      "titel": "Warteschlangen zu Stoßzeiten länger",
+      "text": "Nutzerberichte über Wartezeiten von 6 bis 9 Minuten je Clip am späten Nachmittag, gegenüber rund 2 Minuten im August. Der Anbieter nennt hohe Nachfrage als Grund und stellt zusätzliche Kapazität für KW 37 in Aussicht.",
+      "linkLabel": "Statusseite",
+      "href": "https://example.com/status"
+    },
+    {
+      "kategorie": "Bild",
+      "art": "Release",
+      "datum": "2026-09-05",
+      "titel": "Neues Modell in geschlossener Vorschau",
+      "text": "Ein überarbeitetes Bildmodell startet in geschlossener Vorschau. Der Anbieter nennt bessere Textwiedergabe in Bildern und ruhigere Flächen; belastbare Vergleiche liegen noch nicht vor. Allgemeiner Zugang ist ohne Datum angekündigt.",
+      "linkLabel": "Vorschau-Notiz",
+      "href": "https://example.com/blog/image-preview"
+    },
+    {
+      "kategorie": "Bild",
+      "art": "Update",
+      "datum": "2026-09-01",
+      "titel": "Stapelverarbeitung im Editor",
+      "text": "Der Editor kann dieselbe Bearbeitung jetzt auf bis zu 20 Bilder gleichzeitig anwenden, vorher 5. Die Funktion ist in allen Tarifen enthalten. An der Bildqualität ändert sich nichts.",
+      "linkLabel": "Hilfeartikel",
+      "href": "https://example.com/help/batch-edit"
+    },
+    {
+      "kategorie": "Musik/Audio",
+      "art": "Einordnung",
+      "datum": "2026-09-04",
+      "titel": "Kein Anlass diese Woche",
+      "text": "Bei den beobachteten Musik- und Audio-Anbietern keine dokumentierten Änderungen an Modellen, Preisen oder Nutzungsbedingungen. Der Punkt steht hier, damit die fehlende Meldung nicht als Lücke gelesen wird."
+    }
+  ],
+  "imBlick": [
+    {
+      "was": "Allgemeiner Zugang zum neuen Bildmodell",
+      "stand": "angekündigt ohne Datum"
+    },
+    {
+      "was": "Zusätzliche Video-Kapazität",
+      "stand": "vom Anbieter für KW 37 in Aussicht gestellt"
+    }
+  ],
+  "quellen": [
+    {
+      "label": "Anbieter-Blog Video",
+      "href": "https://example.com/blog"
+    },
+    {
+      "label": "Anbieter-Statusseite",
+      "href": "https://example.com/status"
+    },
+    {
+      "label": "Anbieter-Blog Bild",
+      "href": "https://example.com/image/blog"
+    }
+  ]
+}

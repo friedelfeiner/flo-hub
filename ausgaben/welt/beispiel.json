@@ -1,0 +1,84 @@
+{
+  "id": "welt-beispiel",
+  "ressort": "welt",
+  "titel": "Weltlage",
+  "stand": "2026-09-06",
+  "zeile": "Beispielansicht — Ressort noch im Entwurf.",
+  "status": "entwurf",
+  "rhythmus": "werktäglich, fertig um 7:00",
+  "ausgabe": "Mo 7. Sep",
+  "naechste": "2026-09-08",
+  "schlagzeile": "So sieht die Weltlage später aus",
+  "lede": "Ein Bericht mit vier festen Rubriken: Deutschland, Ukraine, USA/Trump, International. Höchstens zwölf Zeilen, sortiert nach Bedeutung statt nach Uhrzeit. Die folgenden Zeilen sind Platzhalter zur Ansicht.",
+  "bilanz": "Deutschland 1 · Ukraine 1 · USA 1",
+  "bilanzRechts": "",
+  "zeilen": [
+    {
+      "kategorie": "Deutschland",
+      "art": "Beispiel",
+      "datum": "2026-09-06",
+      "titel": "Platzhalter für eine Meldung aus Deutschland",
+      "text": "Hier stünde eine belegte Meldung mit erkennbarem Veröffentlichungsdatum und, wo es Zahlen gibt, einem Vergleichswert daneben."
+    },
+    {
+      "kategorie": "Ukraine",
+      "art": "Beispiel",
+      "datum": "2026-09-06",
+      "titel": "Platzhalter für eine Meldung zur Ukraine",
+      "text": "Hier stünde die Lage des Tages in wenigen Sätzen, ohne Prognose und ohne Wertung."
+    },
+    {
+      "kategorie": "USA/Trump",
+      "art": "Beispiel",
+      "datum": "2026-09-06",
+      "titel": "Platzhalter für eine Meldung aus den USA",
+      "text": "Hier stünde eine Meldung aus Regierung, Kongress oder Gerichten, jeweils mit Quelle und Datum."
+    }
+  ],
+  "plan": {
+    "quellen": [
+      "Tagesschau / ARD-aktuell",
+      "Reuters World",
+      "Associated Press",
+      "Institute for the Study of War (ISW), tägliche Lagebewertung",
+      "Regierungs- und Parlamentsseiten (bund.de, congress.gov)"
+    ],
+    "aufbau": [
+      {
+        "label": "Rubrik 1",
+        "text": "Deutschland — Innen- und Wirtschaftspolitik, was den Tag geprägt hat."
+      },
+      {
+        "label": "Rubrik 2",
+        "text": "Ukraine — militärische und diplomatische Lage, ohne eigenen Tagesbericht."
+      },
+      {
+        "label": "Rubrik 3",
+        "text": "USA/Trump — Regierung, Kongress, Gerichte."
+      },
+      {
+        "label": "Rubrik 4",
+        "text": "International — je eine Zeile zu weiteren relevanten Schauplätzen."
+      },
+      {
+        "label": "Umfang",
+        "text": "Höchstens zwölf Zeilen, nach Bedeutung sortiert."
+      }
+    ]
+  },
+  "imBlick": [],
+  "quellen": [
+    {
+      "label": "Tagesschau",
+      "href": "https://www.tagesschau.de"
+    },
+    {
+      "label": "Reuters",
+      "href": "https://www.reuters.com/world"
+    },
+    {
+      "label": "ISW",
+      "href": "https://www.understandingwar.org"
+    }
+  ]
+}
