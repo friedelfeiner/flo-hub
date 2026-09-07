@@ -13,7 +13,7 @@ anzufassen.
   wie der Artefakt-Entwurf sie zeigt, am Rechner wie am Handy.
 - **B** `Risiko: hoch` — Die Seite geht unter Flos Adresse online, unverlinkt
   und für Suchmaschinen gesperrt.
-- **C** — Für jedes der fünf Ressorts entsteht die Arbeitsanweisung, nach der
+- **C** ✅ — Für jedes der fünf Ressorts entsteht die Arbeitsanweisung, nach der
   recherchiert wird.
 - **D** `[Kern]` `Risiko: hoch` — Ein Lauf macht aus einer Anweisung eine
   fertige Ausgabe und stellt sie auf die Seite.
@@ -109,7 +109,7 @@ ist.
       Ständen. Nachweis vor dem ersten Push, weil Git-Historie sich nicht
       sauber zurücknehmen lässt.
 
-## Block C — Die fünf Briefings
+## Block C — Die fünf Briefings ✅
 
 **Abhängigkeit:** Block A
 **Kontext:** `briefings/`, der bestehende Generative-Media-Prompt (im Konzept
@@ -118,23 +118,23 @@ zitiert), `build/schema.md`
 liegen noch nicht vor. Fehlen sie, bleiben die betroffenen Ressorts auf
 `status: "entwurf"` — der Block ist trotzdem abschließbar.
 
-- [ ] **C1** `briefings/medien.md` existiert und ist die überführte Fassung des
+- [x] **C1** `briefings/medien.md` existiert und ist die überführte Fassung des
       bestehenden Generative-Media-Prompts: Kopfdaten (Ressort, Rhythmus,
       Uhrzeit) als Frontmatter, **die Quellenliste als erste inhaltliche
       Sektion**, danach Auftrag, Relevanzkriterien, Gewichtung, Rubriken und
       Tonregeln. Der Abschnitt zur HTML-Erzeugung entfällt — der Lauf liefert
       JSON nach `build/schema.md`.
-- [ ] **C2** `briefings/welt.md` existiert, mit den Rubriken Deutschland,
+- [x] **C2** `briefings/welt.md` existiert, mit den Rubriken Deutschland,
       Ukraine, USA/Trump, International, werktäglich 7:00, höchstens zwölf
       Zeilen, sortiert nach Bedeutung statt nach Uhrzeit.
-- [ ] **C3** `briefings/krypto.md` und `briefings/finanzen.md` existieren.
+- [x] **C3** `briefings/krypto.md` und `briefings/finanzen.md` existieren.
       Krypto werktäglich 7:00 mit Kursstand, 24-Stunden- und
       7-Tage-Veränderung. Finanzen wöchentlich mit Wochenveränderung,
       Leitindizes und Terminvorschau, Branchenschwerpunkt Windenergie,
       Solar/Erneuerbare, Big Tech. Beide enthalten die Regel, dass Zahlen
       immer mit Vergleichswert daneben stehen und dass keine Empfehlungen
       ausgesprochen werden.
-- [ ] **C4** `briefings/reisen.md` existiert, beschränkt auf konkret geplante
+- [x] **C4** `briefings/reisen.md` existiert, beschränkt auf konkret geplante
       Reisen: Preisverlauf beobachteter Strecken, Fristen der nächsten neunzig
       Tage, Störungen auf betroffenen Strecken. Enthält den Hinweis, dass das
       Ressort ohne gepflegte Reiseliste keinen Inhalt hat.

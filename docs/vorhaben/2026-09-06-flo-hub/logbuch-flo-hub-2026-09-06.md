@@ -33,3 +33,23 @@ Nebenbefunde: `build/build.py` hat `BUILD_DATUM = "2026-09-06"` fest verdrahtet 
 | :--- | :--- | :--- | ---: | ---: | ---: |
 | Berta (Opus) | Handwerk | B3, B4 | 56.363 | 19 | 2.966 |
 | Klara (Opus) | Prüfung | B3, B4 | 53.271 | 17 | 3.134 |
+
+## Block C — Die fünf Briefings · 2026-09-07
+
+C1  Gebaut — Bruno (gpt-5.6-terra): `briefings/medien.md` mit Frontmatter, Quellen als erster inhaltlicher Sektion, JSON-Auftrag und den geforderten Redaktionsregeln  ·  Geprüft — Mira (gpt-5.6-terra): passt mit Anmerkung (der frühere Claude-App-Prompt liegt nicht lokal vor, daher keine wortgetreue Gegenprüfung möglich)
+C2  Gebaut — Bruno (gpt-5.6-terra): `briefings/welt.md` mit vier Rubriken, werktags 7:00, maximal zwölf nach Bedeutung sortierten Zeilen  ·  Geprüft — Mira (gpt-5.6-terra): passt
+C3  Gebaut — Bruno (gpt-5.6-terra): `briefings/krypto.md` und `briefings/finanzen.md` mit Vergleichswertregel, Kennzahlen/Rubriken und ohne Empfehlungen; ohne Watchlists bewusst `entwurf`  ·  Geprüft — Mira (gpt-5.6-terra): passt
+C4  Gebaut — Bruno (gpt-5.6-terra): `briefings/reisen.md` nur für konkrete Reisen, Preisverläufe, 90-Tage-Fristen und Störungen; ohne Reiseliste bewusst `entwurf`  ·  Geprüft — Mira (gpt-5.6-terra): passt
+
+Offen für Flo: C5 — Aktienliste (Name, optional Ticker), Coin-Liste sowie Reiseziele mit Zeitraum hinterlegen; keine Stückzahlen oder Beträge. Das blockiert Block C nicht, aber Krypto, Finanzen und Reisen bleiben ohne diese Listen Entwürfe.
+
+Lokale Prüfung: alle fünf Briefings vorhanden und nicht leer; Frontmatter sowie vorgesehene Abschnitte geprüft; `git diff --check` ohne Beanstandung.
+
+| Agent | Rolle | Sitzungen | total_tokens | ungecachte Eingabe | gecachte Eingabe | Ausgabe | Reasoning-Tokens | neue Tokens | technische Anforderungstokens |
+| :--- | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Orchestrierung (Codex) | Blocksteuerung | 1 | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar |
+| Bruno (gpt-5.6-terra) | Umsetzung C1–C4 | 1 | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar |
+| Mira (gpt-5.6-terra) | unabhängige Prüfung C1–C4 | 1 | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar |
+| Gesamtsumme | Telemetrie | 3 | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar | nicht verfügbar |
+
+Telemetrie, keine Credits-/Euro-Abrechnung. `neue Tokens` = ungecachte Eingabe + Ausgabe; wiederholter gecachter Kontext und technische Anforderungstokens werden getrennt geführt. Für diese lokalen Agentensitzungen waren keine Tokenwerte im Ergebnis verfügbar.
